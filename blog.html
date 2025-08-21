@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kayalcove | Home</title>
+  <title>Kayalcove | Blog</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -11,6 +11,181 @@
   <!-- Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
+  <style>
+
+    .blog-hero {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+
+    .blog-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .blog-hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .blog-section {
+      padding: 80px 0;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .blog-card-image {
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .blog-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(0,0,0,0.3), transparent);
+    }
+
+    .blog-category {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgb(58, 195, 241);
+      color: #000;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .blog-card-content {
+      padding: 2rem;
+    }
+
+    .blog-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .blog-card p {
+      color: #6c757d;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      color: #adb5bd;
+      font-size: 0.9rem;
+    }
+
+    .blog-meta i {
+      margin-right: 0.5rem;
+    }
+
+    .read-more-btn {
+      background: linear-gradient(45deg, #2c3e50, #34495e);
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+    }
+
+    /* Modal Styles */
+    .modal-content {
+      border-radius: 20px;
+      border: none;
+    }
+
+    .modal-header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .modal-body {
+      padding: 2rem;
+    }
+
+    .modal-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+    }
+
+    
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .blog-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .blog-hero p {
+        font-size: 1rem;
+      }
+
+      .blog-card-content {
+        padding: 1.5rem;
+      }
+
+      
+    }
+
+    @media (max-width: 576px) {
+      .blog-hero {
+        padding: 100px 0 60px;
+      }
+
+      .blog-hero h1 {
+        font-size: 2rem;
+      }
+
+      .blog-section {
+        padding: 60px 0;
+      }
+
+      .blog-card-content {
+        padding: 1rem;
+      }
+
+      .blog-card h3 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -20,14 +195,12 @@
       <a class="navbar-brand text-white" href="#">
         <img src="images/logo.png" alt="">
       </a>
-      <!-- Updated toggle button with middle bar for X animation -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon">
           <span class="middle-bar"></span>
         </span>
       </button>
 
-      <!-- Collapsible content -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-lg-center">
          <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
@@ -36,7 +209,6 @@
           <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
           <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <!-- Book Now inside collapse so it aligns properly -->
           <li class="nav-item ms-lg-3">
             <a href="#" class="btn btn-light btn-book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
           </li>
@@ -45,34 +217,442 @@
     </div>
   </nav>
 
-  <main class="container-fluid px-3 px-md-4 pt-3">
-    <!-- Hero Section -->
-    <div class="small-hero-section position-relative overflow-hidden rounded-4">
-      <!-- Background image -->
-      <img src="images/resort_image/new-camp-della-exterior-v4.webp" alt="Pool" class="img-fluid rounded-4 w-100">
+  <!-- Blog Hero Section -->
+   <main class="container-fluid px-3 px-md-4 pt-3">
+  <!-- Hero Section -->
+  <div class="small-hero-section position-relative overflow-hidden rounded-4">
+    <!-- Background image -->
+    <img src="images/resort_image/new-camp-della-exterior-v4.webp" alt="Pool" class="img-fluid rounded-4 w-100">
 
-      <!-- Overlay for text + button -->
-      <div class="small-hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center ps-4 ps-md-5 text-white">
-        <p class="small mb-2">The Amazing Place to provide your escape plan in Bali, Indonesia</p>
-        <h1 class="fw-bold display-5">Made your Amazing <br><em>Escape Plan Moment Memorable</em></h1>
-        <a href="#" class="btn btn-light btn-book mt-3">Book Now <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-
-      <!-- Promo Box -->
-      
+    <!-- Overlay for text + button -->
+    <div class="small-hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center ps-4 ps-md-5 text-white">
+      <p class="small mb-2">Discover the luxury retreat in the heart of Alappuzha</p>
+      <h1 class="fw-bold display-5">Experience <br><em>Paradise on Earth</em></h1>
+     
     </div>
-  </main>
+
+    <!-- Promo Box -->
+    
+  </div>
+</main>
 
 
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="row">
+        <!-- Blog Post 1 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal1">
+            <div class="blog-card-image" style="background-image: url('images/blog_images/one.jpg')">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-category">Places to Visit</div>
+            </div>
+            <div class="blog-card-content">
+              <h3>Top 10 Must-Visit Places in Alappuzha</h3>
+              <p>Discover the most breathtaking destinations in the Venice of the East, from serene backwaters to historic landmarks.</p>
+              <div class="blog-meta">
+                <i class="fas fa-calendar-alt"></i>
+                <span>March 15, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla, id quasi illum nisi recusandae quo doloribus. Sed voluptates consequuntur aut error consequatur harum qui illo aliquid, officiis quos ad!</h1>
+        <!-- Blog Post 2 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal2">
+            <div class="blog-card-image" style="background-image: url('images/blog_images/kappa.jpeg')">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-category">Cuisine</div>
+            </div>
+            <div class="blog-card-content">
+              <h3>Traditional Kerala Delicacies at Kayalcove</h3>
+              <p>Savor authentic Kerala cuisine prepared with fresh local ingredients and traditional recipes passed down through generations.</p>
+              <div class="blog-meta">
+                <i class="fas fa-calendar-alt"></i>
+                <span>March 12, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Blog Post 3 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal3">
+            <div class="blog-card-image" style="background-image: url('images/blog_images/house boat.jpg')">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-category">Activities</div>
+            </div>
+            <div class="blog-card-content">
+              <h3>Backwater Adventures & Water Sports</h3>
+              <p>Experience thrilling water activities and peaceful backwater cruises that showcase the natural beauty of Alappuzha.</p>
+              <div class="blog-meta">
+                <i class="fas fa-calendar-alt"></i>
+                <span>March 10, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Blog Post 4 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal4">
+            <div class="blog-card-image" style="background-image: url('images/blog_images/four.jpg')">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-category">Culture</div>
+            </div>
+            <div class="blog-card-content">
+              <h3>Local Festivals & Cultural Experiences</h3>
+              <p>Immerse yourself in the rich cultural heritage of Kerala through vibrant festivals and traditional performances.</p>
+              <div class="blog-meta">
+                <i class="fas fa-calendar-alt"></i>
+                <span>March 8, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Blog Post 5 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal5">
+            <div class="blog-card-image" style="background-image: url('images/blog_images/room2.jpg')">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-category">Accommodation</div>
+            </div>
+            <div class="blog-card-content">
+              <h3>Luxury Amenities at Kayalcove Resort</h3>
+              <p>Discover world-class facilities and personalized services that make your stay at Kayalcove truly unforgettable.</p>
+              <div class="blog-meta">
+                <i class="fas fa-calendar-alt"></i>
+                <span>March 5, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Blog Post 6 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal6">
+            <div class="blog-card-image" style="background-image: url('images/blog_images/room15.jpg')">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-category">Wellness</div>
+            </div>
+            <div class="blog-card-content">
+              <h3>Ayurvedic Spa & Wellness Treatments</h3>
+              <p>Rejuvenate your mind and body with authentic Ayurvedic treatments and holistic wellness programs.</p>
+              <div class="blog-meta">
+                <i class="fas fa-calendar-alt"></i>
+                <span>March 3, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Blog Post 7 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal7">
+            <div class="blog-card-image" style="background-image: url('images/blog_images/six.jpg')">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-category">Nature</div>
+            </div>
+            <div class="blog-card-content">
+              <h3>Bird Watching & Wildlife Photography</h3>
+              <p>Explore the diverse ecosystem of Alappuzha and capture stunning wildlife moments in their natural habitat.</p>
+              <div class="blog-meta">
+                <i class="fas fa-calendar-alt"></i>
+                <span>March 1, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Blog Post 8 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal8">
+            <div class="blog-card-image" style="background-image: url('images/blog_images/vallamkali.jpg')">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-category">Transportation</div>
+            </div>
+            <div class="blog-card-content">
+              <h3>Getting Around Alappuzha: Travel Guide</h3>
+              <p>Your complete guide to transportation options and the best ways to explore Alappuzha and surrounding areas.</p>
+              <div class="blog-meta">
+                <i class="fas fa-calendar-alt"></i>
+                <span>February 28, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Blog Post 9 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal9">
+            <div class="blog-card-image" style="background-image: url('images/blog_images/ten.jpg')">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-category">Seasonal</div>
+            </div>
+            <div class="blog-card-content">
+              <h3>Best Time to Visit Alappuzha</h3>
+              <p>Plan your perfect getaway with our seasonal guide covering weather, festivals, and the best activities for each season.</p>
+              <div class="blog-meta">
+                <i class="fas fa-calendar-alt"></i>
+                <span>February 25, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Modals -->
+  <!-- Modal 1 -->
+  <div class="modal fade" id="blogModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Top 10 Must-Visit Places in Alappuzha</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="images/blog_images/one.jpg" alt="Alappuzha Backwaters" class="modal-image">
+          <p class="lead">Discover the most enchanting destinations in the Venice of the East.</p>
+          <p><strong>1. Alappuzha Backwaters:</strong> Experience the serene beauty of interconnected canals, lagoons, and lakes that form the backbone of Kerala's tourism.</p>
+          <p><strong>2. Marari Beach:</strong> A pristine stretch of golden sand perfect for relaxation and watching spectacular sunsets.</p>
+          <p><strong>3. Kumarakom Bird Sanctuary:</strong> Home to numerous species of birds including migratory birds from Siberia.</p>
+          <p><strong>4. Pathiramanal Island:</strong> A small island accessible only by boat, known for rare birds and peaceful surroundings.</p>
+          <p><strong>5. St. Mary's Forane Church:</strong> A historic church showcasing beautiful architecture and rich cultural heritage.</p>
+          <p><strong>6. Alappuzha Beach:</strong> Famous for its lighthouse, pier, and the annual sand art festival.</p>
+          <p><strong>7. Kuttanad:</strong> Known as the 'Rice Bowl of Kerala', featuring unique farming below sea level.</p>
+          <p><strong>8. Ambalappuzha Sri Krishna Temple:</strong> Famous for its traditional architecture and the sweet 'palpayasam'.</p>
+          <p><strong>9. Nedumudi:</strong> A quaint village perfect for experiencing authentic Kerala rural life.</p>
+          <p><strong>10. Vembanad Lake:</strong> India's second-largest lake, ideal for houseboat cruises and fishing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal fade" id="blogModal2" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Traditional Kerala Delicacies at Kayalcove</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="images/blog_images/two.jpg" alt="Kerala Cuisine" class="modal-image">
+          <p class="lead">Embark on a culinary journey through authentic Kerala flavors at Kayalcove.</p>
+          <p><strong>Signature Dishes at Kayalcove:</strong></p>
+          <p><strong>• Kerala Fish Curry:</strong> Fresh catch from local waters cooked in coconut milk with traditional spices.</p>
+          <p><strong>• Appam with Stew:</strong> Soft, fluffy rice pancakes served with aromatic vegetable or meat stew.</p>
+          <p><strong>• Karimeen Fry:</strong> Pearl spot fish marinated in spices and pan-fried to perfection.</p>
+          <p><strong>• Puttu and Kadala:</strong> Steamed rice cake served with spicy chickpea curry.</p>
+          <p><strong>• Thalassery Biryani:</strong> Fragrant rice dish with tender meat and aromatic spices.</p>
+          <p><strong>• Payasam:</strong> Traditional sweet dessert made with rice, milk, and jaggery.</p>
+          <p><strong>Fresh Ingredients:</strong> All dishes are prepared using organic vegetables from local farms, fresh seafood from Alappuzha waters, and authentic spices sourced directly from Kerala spice gardens.</p>
+          <p><strong>Dining Experience:</strong> Enjoy your meals with stunning backwater views in our waterfront restaurant, creating an unforgettable culinary experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="modal fade" id="blogModal3" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Backwater Adventures & Water Sports</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="images/blog_images/house boat.jpg" alt="Water Activities" class="modal-image">
+          <p class="lead">Experience the thrill of water adventures in Alappuzha's pristine backwaters.</p>
+          <p><strong>Available Activities:</strong></p>
+          <p><strong>• Houseboat Cruises:</strong> Luxury overnight stays on traditional Kerala houseboats with all modern amenities.</p>
+          <p><strong>• Kayaking:</strong> Navigate through narrow canals and explore hidden waterways at your own pace.</p>
+          <p><strong>• Canoeing:</strong> Peaceful rides through serene backwaters with experienced local guides.</p>
+          <p><strong>• Fishing Expeditions:</strong> Try traditional fishing methods with local fishermen and catch your dinner.</p>
+          <p><strong>• Speed Boat Tours:</strong> Quick tours covering major attractions and scenic spots.</p>
+          <p><strong>• Sunset Cruises:</strong> Romantic evening cruises with spectacular sunset views.</p>
+          <p><strong>Safety First:</strong> All activities include professional guides, safety equipment, and emergency support.</p>
+          <p><strong>Best Times:</strong> Early morning (6-9 AM) and evening (4-7 PM) offer the most pleasant weather and stunning lighting for photography.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div class="modal fade" id="blogModal4" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Local Festivals & Cultural Experiences</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src='images/blog_images/vallamkali.jpg' alt="Kerala Culture" class="modal-image">
+          <p class="lead">Immerse yourself in the rich cultural tapestry of Kerala through vibrant festivals and traditions.</p>
+          <p><strong>Major Festivals:</strong></p>
+          <p><strong>• Nehru Trophy Boat Race (August):</strong> The most famous snake boat race in Kerala, attracting thousands of spectators.</p>
+          <p><strong>• Onam (August-September):</strong> Kerala's harvest festival celebrated with traditional dances, music, and the grand Onam Sadhya feast.</p>
+          <p><strong>• Vishu (April):</strong> Malayalam New Year celebrated with traditional rituals and special preparations.</p>
+          <p><strong>• Christmas & New Year:</strong> Celebrated with special decorations and cultural programs at the resort.</p>
+          <p><strong>Cultural Activities at Kayalcove:</strong></p>
+          <p><strong>• Kathakali Performances:</strong> Traditional dance-drama shows featuring elaborate costumes and storytelling.</p>
+          <p><strong>• Mohiniyattam Classes:</strong> Learn Kerala's classical dance form with expert instructors.</p>
+          <p><strong>• Traditional Cooking Classes:</strong> Master the art of Kerala cuisine with our experienced chefs.</p>
+          <p><strong>• Ayurvedic Workshops:</strong> Learn about traditional healing practices and herbal medicine.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5 -->
+  <div class="modal fade" id="blogModal5" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Luxury Amenities at Kayalcove Resort</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src='images/blog_images/vallamkali.jpg' alt="Luxury Resort" class="modal-image">
+          <p class="lead">Experience unparalleled luxury and comfort with our world-class amenities and services.</p>
+          <p><strong>Accommodation Options:</strong></p>
+          <p><strong>• Premium Waterfront Villas:</strong> Spacious villas with private balconies overlooking the backwaters.</p>
+          <p><strong>• Luxury Suites:</strong> Elegantly furnished suites with modern amenities and traditional Kerala décor.</p>
+          <p><strong>• Family Cottages:</strong> Perfect for families with separate bedrooms and living areas.</p>
+          <p><strong>• Honeymoon Suites:</strong> Romantic accommodations with private pools and exclusive services.</p>
+          <p><strong>Resort Facilities:</strong></p>
+          <p><strong>• Infinity Pool:</strong> Stunning infinity pool with backwater views and poolside service.</p>
+          <p><strong>• Ayurvedic Spa:</strong> Full-service spa offering traditional treatments and modern wellness therapies.</p>
+          <p><strong>• Multi-cuisine Restaurant:</strong> Fine dining with Kerala specialties and international cuisine.</p>
+          <p><strong>• Conference Hall:</strong> Modern meeting facilities for business travelers and events.</p>
+          <p><strong>• Fitness Center:</strong> Well-equipped gym with modern exercise equipment.</p>
+          <p><strong>• Library & Reading Room:</strong> Quiet space with books about Kerala culture and history.</p>
+          <p><strong>• Gift Shop:</strong> Authentic Kerala handicrafts and souvenirs.</p>
+          <p><strong>Personalized Services:</strong> 24/7 concierge service, airport transfers, tour arrangements, laundry service, and room service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6 -->
+  <div class="modal fade" id="blogModal6" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Ayurvedic Spa & Wellness Treatments</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src='images/blog_images/vallamkali.jpg' alt="Ayurvedic Spa" class="modal-image">
+          <p class="lead">Rejuvenate your mind, body, and soul with authentic Ayurvedic treatments and holistic wellness programs.</p>
+          <p><strong>Traditional Ayurvedic Treatments:</strong></p>
+          <p><strong>• Abhyangam:</strong> Full-body oil massage using medicated herbal oils to improve circulation and relax muscles.</p>
+          <p><strong>• Shirodhara:</strong> Continuous pouring of warm oil on the forehead to calm the nervous system.</p>
+          <p><strong>• Panchakarma:</strong> Complete detoxification program designed to cleanse and rejuvenate the body.</p>
+          <p><strong>• Pizhichil:</strong> Royal treatment combining oil massage with warm medicated oil bath.</p>
+          <p><strong>• Njavarakizhi:</strong> Therapeutic massage using rice cooked in herbal milk to nourish the skin.</p>
+          <p><strong>Modern Wellness Services:</strong></p>
+          <p><strong>• Aromatherapy:</strong> Essential oil treatments for stress relief and relaxation.</p>
+          <p><strong>• Hot Stone Massage:</strong> Deep tissue massage using heated volcanic stones.</p>
+          <p><strong>• Yoga Classes:</strong> Daily sessions led by certified instructors in scenic outdoor settings.</p>
+          <p><strong>• Meditation Sessions:</strong> Guided meditation programs to achieve mental clarity and peace.</p>
+          <p><strong>Expert Practitioners:</strong> All treatments are conducted by licensed Ayurvedic doctors and experienced therapists trained in traditional methods.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 7 -->
+  <div class="modal fade" id="blogModal7" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bird Watching & Wildlife Photography</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src='images/blog_images/vallamkali.jpg' alt="Bird Watching" class="modal-image">
+          <p class="lead">Discover the incredible biodiversity of Alappuzha through guided bird watching tours and wildlife photography expeditions.</p>
+          <p><strong>Bird Species to Spot:</strong></p>
+          <p><strong>• Kingfishers:</strong> Various species including White-breasted and Common Kingfishers found along waterways.</p>
+          <p><strong>• Herons:</strong> Grey Herons, Night Herons, and Purple Herons fishing in shallow waters.</p>
+          <p><strong>• Egrets:</strong> Cattle Egrets and Little Egrets commonly seen in paddy fields.</p>
+          <p><strong>• Migratory Birds:</strong> Seasonal visitors from Siberia and other northern regions during winter months.</p>
+          <p><strong>• Endemic Species:</strong> Kerala-specific birds like Malabar Grey Hornbill and Indian Pitta.</p>
+          <p><strong>Best Locations:</strong></p>
+          <p><strong>• Kumarakom Bird Sanctuary:</strong> Premier bird watching destination with over 180 species.</p>
+          <p><strong>• Pathiramanal Island:</strong> Accessible by boat, perfect for spotting rare and migratory birds.</p>
+          <p><strong>• Vembanad Lake:</strong> Early morning boat rides offer excellent photography opportunities.</p>
+          <p><strong>Photography Tips:</strong> Best lighting during golden hours (6-8 AM and 5-7 PM). We provide basic equipment and expert guides familiar with bird behavior and prime locations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 8 -->
+  <div class="modal fade" id="blogModal8" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Getting Around Alappuzha: Travel Guide</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src='images/blog_images/vallamkali.jpg' alt="Transportation" class="modal-image">
+          <p class="lead">Navigate Alappuzha with ease using our comprehensive transportation guide and travel tips.</p>
+          <p><strong>Getting to Kayalcove:</strong></p>
+          <p><strong>• By Air:</strong> Cochin International Airport (85 km) - We provide airport pickup service.</p>
+          <p><strong>• By Train:</strong> Alappuzha Railway Station (12 km) - Connected to major Indian cities.</p>
+          <p><strong>• By Road:</strong> Well-connected by NH66, accessible from Kochi (53 km) and Trivandrum (155 km).</p>
+          <p><strong>Local Transportation:</strong></p>
+          <p><strong>• Auto-rickshaws:</strong> Most convenient for short distances within the town.</p>
+          <p><strong>• Taxi Services:</strong> Available for longer trips and sightseeing tours.</p>
+          <p><strong>• Bicycle Rentals:</strong> Eco-friendly option for exploring nearby areas at leisure.</p>
+          <p><strong>• Boat Services:</strong> Traditional country boats and speed boats for backwater exploration.</p>
+          <p><strong>Resort Transportation Services:</strong></p>
+          <p><strong>• Complimentary Shuttle:</strong> Regular service to Alappuzha town and major attractions.</p>
+          <p><strong>• Guided Tours:</strong> Organized trips to popular destinations with experienced local guides.</p>
+          <p><strong>• Rental Vehicles:</strong> Cars and motorcycles available for self-exploration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 9 -->
+  <div class="modal fade" id="blogModal9" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Best Time to Visit Alappuzha</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src='images/blog_images/vallamkali.jpg' alt="Seasonal Guide" class="modal-image">
+          <p class="lead">Plan your perfect getaway with our comprehensive seasonal guide to Alappuzha's weather, festivals, and activities.</p>
+          <p><strong>Peak Season (October - March):</strong></p>
+          <p><strong>Weather:</strong> Pleasant temperatures (23-32°C), low humidity, minimal rainfall.</p>
+          <p><strong>Highlights:</strong> Perfect for houseboat cruises, outdoor activities, and sightseeing.</p>
+          <p><strong>Festivals:</strong> Christmas, New Year, and various temple festivals.</p>
+          <p><strong>Monsoon Season (June - September):</strong></p>
+          <p><strong>Weather:</strong> Heavy rainfall, lush greenery, cooler temperatures (24-29°C).</p>
+          <p><strong>Highlights:</strong> Dramatic landscapes, Ayurvedic treatments are most effective, fewer crowds.</p>
+          <p><strong>Festivals:</strong> Onam (August-September), Nehru Trophy Boat Race (August).</p>
+          <p><strong>Summer Season (April - May):</strong></p>
+          <p><strong>Weather:</strong> Hot and humid (26-36°C), occasional pre-monsoon showers.</p>
+          <p><strong>Highlights:</strong> Vishu festival, mango season, ideal for spa treatments.</p>
+          <p><strong>Kayalcove Special Packages:</strong></p>
+          <p><strong>• Monsoon Wellness Package:</strong> Enhanced Ayurvedic treatments and indoor activities.</p>
+          <p><strong>• Peak Season Adventure Package:</strong> Water sports, sightseeing, and cultural programs.</p>
+          <p><strong>• Summer Serenity Package:</strong> Spa-focused stays with air-conditioned comfort.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer-section">
     <div class="container">
@@ -174,6 +754,27 @@
         });
       });
     });
+
+    // Add smooth scroll animation to modal opening
+    const blogCards = document.querySelectorAll('.blog-card');
+    blogCards.forEach(card => {
+      card.addEventListener('click', function() {
+        this.style.transform = 'scale(0.98)';
+        setTimeout(() => {
+          this.style.transform = '';
+        }, 150);
+      });
+    });
+
+    // Add loading animation for images
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.modal-image');
+      images.forEach(img => {
+        img.addEventListener('load', function() {
+          this.style.opacity = '1';
+        });
+      });
+    });
   </script>
 </body>
-</html>                                 
+</html>
