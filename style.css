@@ -755,4 +755,32 @@ body{
             }
         }
 
+/* contact */
+        .contact-section {
+  background: #f9f9f9;
+  font-family: 'Outfit', sans-serif;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.contact-section .form-control {
+  border-radius: 8px;
+  padding: 12px 15px;
+}
+
+.contact-section .btn {
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+
+
        
