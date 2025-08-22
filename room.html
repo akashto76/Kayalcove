@@ -85,6 +85,31 @@
   color: #000;
   border: 1px solid #000;
 }
+body, * {
+  font-family: "Outfit", sans-serif !important;
+}
+/* Scroll Animation */
+.scroll-animate {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* Cards Scroll Animation */
+.card-animate {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease-out;
+}
+
+.card-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
   </style>
 </head>
 <body>
@@ -140,21 +165,22 @@
   <!-- Rooms Section -->
 <section class="container my-5">
   <h2 class="text-center fw-bold mb-5">Our Rooms & Villas</h2>
+
   <div class="row g-4">
 
     <!-- Card 1 -->
     <div class="col-lg-4 col-md-6">
-      <div class="card room-card h-100">
+      <div class="card room-card h-100 card-animate">
         <div id="carousel1" class="carousel slide" data-bs-ride="false">
           <div class="carousel-inner rounded-top">
             <div class="carousel-item active">
-              <img src="images/room_images/a.jpg" class="d-block w-100" alt="Deluxe Room">
+              <img src="images/room_images/room2.jpg" class="d-block w-100" alt="Deluxe Room">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/b.jpg" class="d-block w-100" alt="Deluxe Room">
+              <img src="images/room_images/room1.jpg" class="d-block w-100" alt="Deluxe Room">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/c.jpg" class="d-block w-100" alt="Deluxe Room">
+              <img src="images/room_images/room3.jpg" class="d-block w-100" alt="Deluxe Room">
             </div>
           </div>
           <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
@@ -165,9 +191,9 @@
           </button>
         </div>
         <div class="card-body text-center p-4">
-          <h5 class="card-title fw-bold">Deluxe Room</h5>
+          <h5 class="card-title fw-bold">Backwater Deluxe</h5>
           <div style="min-height: 15vh;">
-            <p class="text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sed adipisci, suscipit veniam ducimus architecto amet dignissimos quibusdam quisquam accusamus illo accusantium laudantium rerum minima ipsa nobis, neque praesentium debitis?</p>
+            <p class="text-muted small">Experience comfort and elegance in our Backwater Deluxe Room, perfect for couples or solo travelers. Designed with modern amenities and touches of Kerala charm, this cozy retreat is ideal after exploring Alappuzha’s houseboats and beaches.</p>
           </div>
             <center><hr></center>
           <div class="d-flex justify-content-between align-items-center mt-3">
@@ -180,17 +206,17 @@
 
     <!-- Card 2 -->
     <div class="col-lg-4 col-md-6">
-      <div class="card room-card h-100">
+      <div class="card room-card h-100 card-animate">
         <div id="carousel2" class="carousel slide" data-bs-ride="false">
           <div class="carousel-inner rounded-top">
             <div class="carousel-item active">
-              <img src="images/room_images/a.jpg" class="d-block w-100" alt="Suite Room">
+              <img src="images/room_images/room4.jpg" class="d-block w-100" alt="Suite Room">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/b.jpg" class="d-block w-100" alt="Suite Room">
+              <img src="images/room_images/room5.jpg" class="d-block w-100" alt="Suite Room">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/c.jpg" class="d-block w-100" alt="Suite Room">
+              <img src="images/room_images/room6.jpg" class="d-block w-100" alt="Suite Room">
             </div>
           </div>
           <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
@@ -201,9 +227,9 @@
           </button>
         </div>
         <div class="card-body text-center p-4">
-          <h5 class="card-title fw-bold">Suite Room</h5>
+          <h5 class="card-title fw-bold">Heritage Suite</h5>
           <div style="min-height: 15vh;">
-            <p class="text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sed adipisci, suscipit veniam ducimus architecto amet dignissimos quibusdam quisquam accusamus illo accusantium laudantium rerum minima ipsa nobis, neque praesentium debitis?</p>
+            <p class="text-muted small">Indulge in luxury with our Heritage Suite, offering a spacious bedroom, private sitting area, and elegant interiors. Ideal for those seeking comfort and sophistication while enjoying the calm beauty of Alappuzha.</p>
           </div>            
           <center><hr></center>
           <div class="d-flex justify-content-between align-items-center mt-3">
@@ -216,17 +242,17 @@
 
     <!-- Card 3 -->
     <div class="col-lg-4 col-md-6">
-      <div class="card room-card h-100">
+      <div class="card room-card h-100 card-animate">
         <div id="carousel3" class="carousel slide" data-bs-ride="false">
           <div class="carousel-inner rounded-top">
             <div class="carousel-item active">
-              <img src="images/room_images/a.jpg" class="d-block w-100" alt="Family Villa">
+              <img src="images/room_images/room7.jpg" class="d-block w-100" alt="Family Villa">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/b.jpg" class="d-block w-100" alt="Family Villa">
+              <img src="images/room_images/room8.jpg" class="d-block w-100" alt="Family Villa">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/c.jpg" class="d-block w-100" alt="Family Villa">
+              <img src="images/room_images/room9.jpg" class="d-block w-100" alt="Family Villa">
             </div>
           </div>
           <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
@@ -237,9 +263,9 @@
           </button>
         </div>
         <div class="card-body text-center p-4">
-          <h5 class="card-title fw-bold">Family Villa</h5>
+          <h5 class="card-title fw-bold">Lakeside Family Villa</h5>
           <div style="min-height: 15vh;">
-            <p class="text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sed adipisci, suscipit veniam ducimus architecto amet dignissimos quibusdam quisquam accusamus illo accusantium laudantium rerum minima ipsa nobis, neque praesentium debitis?</p>
+            <p class="text-muted small">Perfect for families and groups, our Lakeside Family Villa features multiple bedrooms, a living space, and modern amenities. Surrounded by greenery and close to the backwaters, it’s a peaceful stay with room for everyone.</p>
           </div>
             <center><hr></center>
           <div class="d-flex justify-content-between align-items-center mt-3">
@@ -252,17 +278,17 @@
 
     <!-- Card 4 -->
     <div class="col-lg-4 col-md-6">
-      <div class="card room-card h-100">
+      <div class="card room-card h-100 card-animate">
         <div id="carousel4" class="carousel slide" data-bs-ride="false">
           <div class="carousel-inner rounded-top">
             <div class="carousel-item active">
-              <img src="images/room_images/a.jpg" class="d-block w-100" alt="Luxury Villa">
+              <img src="images/room_images/room10.jpg" class="d-block w-100" alt="Luxury Villa">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/b.jpg" class="d-block w-100" alt="Luxury Villa">
+              <img src="images/room_images/room11.jpg" class="d-block w-100" alt="Luxury Villa">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/c.jpg" class="d-block w-100" alt="Luxury Villa">
+              <img src="images/room_images/room12.jpg" class="d-block w-100" alt="Luxury Villa">
             </div>
           </div>
           <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
@@ -273,9 +299,9 @@
           </button>
         </div>
         <div class="card-body text-center p-4">
-          <h5 class="card-title fw-bold">Luxury Villa</h5>
+          <h5 class="card-title fw-bold">Royal Luxury Villa</h5>
           <div style="min-height: 15vh;">
-            <p class="text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sed adipisci, suscipit veniam ducimus architecto amet dignissimos quibusdam quisquam accusamus illo accusantium laudantium rerum minima ipsa nobis, neque praesentium debitis?</p>
+            <p class="text-muted small">Redefine indulgence with the Royal Luxury Villa, blending Kerala’s traditional design with premium facilities. Featuring private balconies and exclusive spaces, it is perfect for honeymooners or guests seeking an upscale retreat.</p>
           </div>
             <center><hr></center>
           <div class="d-flex justify-content-between align-items-center mt-3">
@@ -288,17 +314,17 @@
 
     <!-- Card 5 -->
     <div class="col-lg-4 col-md-6">
-      <div class="card room-card h-100">
+      <div class="card room-card h-100 card-animate">
         <div id="carousel5" class="carousel slide" data-bs-ride="false">
           <div class="carousel-inner rounded-top">
             <div class="carousel-item active">
-              <img src="images/room_images/a.jpg" class="d-block w-100" alt="Ocean View Room">
+              <img src="images/room_images/room13.jpg" class="d-block w-100" alt="Ocean View Room">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/b.jpg" class="d-block w-100" alt="Ocean View Room">
+              <img src="images/room_images/room14.jpg" class="d-block w-100" alt="Ocean View Room">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/c.jpg" class="d-block w-100" alt="Ocean View Room">
+              <img src="images/room_images/room15.jpg" class="d-block w-100" alt="Ocean View Room">
             </div>
           </div>
           <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
@@ -309,9 +335,9 @@
           </button>
         </div>
         <div class="card-body text-center p-4">
-          <h5 class="card-title fw-bold">Ocean View Room</h5>
+          <h5 class="card-title fw-bold">Arabian Sea View Room</h5>
           <div style="min-height: 15vh;">
-            <p class="text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sed adipisci, suscipit veniam ducimus architecto amet dignissimos quibusdam quisquam accusamus illo accusantium laudantium rerum minima ipsa nobis, neque praesentium debitis?</p>
+            <p class="text-muted small">Wake up to breathtaking views of the Arabian Sea. Our Sea View Room combines comfort with nature’s beauty, making it the perfect stay for beach lovers who want to enjoy Alappuzha’s vibrant coastline.</p>
           </div>
             <center><hr></center>
           <div class="d-flex justify-content-between align-items-center mt-3">
@@ -324,17 +350,17 @@
 
     <!-- Card 6 -->
     <div class="col-lg-4 col-md-6">
-      <div class="card room-card h-100">
+      <div class="card room-card h-100 card-animate">
         <div id="carousel6" class="carousel slide" data-bs-ride="false">
           <div class="carousel-inner rounded-top">
             <div class="carousel-item active">
-              <img src="images/room_images/a.jpg" class="d-block w-100" alt="Garden Villa">
+              <img src="images/room_images/room9.jpg" class="d-block w-100" alt="Garden Villa">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/b.jpg" class="d-block w-100" alt="Garden Villa">
+              <img src="images/room_images/room16.jpg" class="d-block w-100" alt="Garden Villa">
             </div>
             <div class="carousel-item">
-              <img src="images/room_images/c.jpg" class="d-block w-100" alt="Garden Villa">
+              <img src="images/room_images/room1.jpg" class="d-block w-100" alt="Garden Villa">
             </div>
           </div>
           <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carousel6" data-bs-slide="prev">
@@ -345,9 +371,9 @@
           </button>
         </div>
         <div class="card-body text-center p-4">
-          <h5 class="card-title fw-bold">Garden Villa</h5>
+          <h5 class="card-title fw-bold">Tropical Garden Villa</h5>
           <div style="min-height: 15vh;">
-            <p class="text-muted small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sed adipisci, suscipit veniam ducimus architecto amet dignissimos quibusdam quisquam accusamus illo accusantium laudantium rerum minima ipsa nobis, neque praesentium debitis?</p>
+            <p class="text-muted small">Nestled amidst lush tropical gardens, the Tropical Garden Villa is designed for those who love tranquility and nature. Enjoy a serene ambiance with birdsong and greenery, just minutes from the backwaters.</p>
           </div>
             <center><hr></center>
           <div class="d-flex justify-content-between align-items-center mt-3">
@@ -361,7 +387,32 @@
   </div>
 </section>
 
+<br><br><br><br>
 
+<!-- New Heading & Paragraph with animation class -->
+  <div class="scroll-animate mb-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Image -->
+    <div class="col-md-6 mb-3 mb-md-0" style="padding-left: 100px;">
+      <img src="images/room_images/room2.jpg" alt="Discover Stay" class="img-fluid rounded-4 shadow" style="width: 500px; height: auto;">
+    </div>
+
+    <!-- Right Column: Text -->
+    <div class="col-md-6">
+      <h3 class="fw-bold">Discover Your Perfect Stay</h3>
+      <p class="text-muted">
+        From cozy deluxe rooms to luxury villas, we provide a wide range of stays tailored for couples, families, and groups. 
+  Enjoy Kerala’s charm and comfort with us. Each space is thoughtfully designed to blend modern amenities with the serene beauty 
+  of the backwaters, ensuring that every guest feels at home while surrounded by nature’s tranquility. Whether you are here for 
+  a romantic escape, a family getaway, or a peaceful retreat, our rooms and villas offer the perfect balance of relaxation and 
+  authenticity. Wake up to breathtaking views, unwind in spacious interiors, and indulge in an experience that makes your stay 
+  truly unforgettable.
+      </p>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br>
 
   <!-- Footer -->
   <footer class="footer-section">
@@ -464,6 +515,30 @@
         });
       });
     });
+
+// Animate heading/paragraph on scroll, but cards animate immediately
+document.addEventListener("DOMContentLoaded", function() {
+  // Heading + paragraph: only animate on scroll
+  const scrollElements = document.querySelectorAll(".scroll-animate");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  scrollElements.forEach(el => observer.observe(el));
+
+  // Cards: animate automatically after short delay
+  const cards = document.querySelectorAll(".card-animate");
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add("show");
+    }, index * 200); // stagger effect (200ms between each card)
+  });
+});
   </script>
 </body>
 </html>
