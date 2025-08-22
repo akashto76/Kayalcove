@@ -570,7 +570,7 @@ body{
 
 
 
-/* Gallery Styles */
+/* Small Menu Styles */
 
 
 
@@ -618,21 +618,11 @@ body{
             --transition: all 0.3s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      
+        
+        /* Gallery Styles */
 
-     
-
-       
-
-       
-
-       
-
-       
+   
 
         .theme-toggle {
             background: var(--primary);
@@ -900,7 +890,6 @@ body{
 }
 
 
- /*  Rooms*/
 
 
      /* Rooms */
