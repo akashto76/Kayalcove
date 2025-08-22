@@ -570,9 +570,7 @@ body{
 
 
 
-/* Gallery Styles */
-
-
+/* small menu Styles */
 
  .small-hero-section {
                 position: relative;
@@ -617,22 +615,6 @@ body{
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-     
-
-       
-
-       
-
-       
-
-       
 
         .theme-toggle {
             background: var(--primary);
