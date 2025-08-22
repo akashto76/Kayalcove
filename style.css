@@ -951,8 +951,7 @@ body{
   color: #2c3e50;
 }
 
-/* Book Now Button */
-.btn-book {
+/* .btn-book {
   background: #000;
   color: #fff;
   border-radius: 30px;
@@ -967,7 +966,9 @@ body{
 }
 body, * {
   font-family: "Outfit", sans-serif !important;
-}
+} */
+
+
 /* Scroll Animation */
 .scroll-animate {
   opacity: 0;
