@@ -582,7 +582,7 @@ body{
                 max-height: 60vh; /* Adjust this value as needed */
             }
 
-            .small-hero-section img {
+.small-hero-section img {
                 object-fit: cover;
                 /* Reduce height significantly */
                 height: 70vh; /* Changed from 110vh to 70vh */
@@ -593,30 +593,30 @@ body{
                 /* height: 500px; - Fixed pixel height */
             }
 
-            .small-hero-overlay {
-                background: linear-gradient(90deg, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0) 70%);
-                padding: 2rem;
-                border-radius: inherit;
-                /* Ensure overlay covers the reduced container */
-                min-height: 100%;
-            }
+    .small-hero-overlay {
+        background: linear-gradient(90deg, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0) 70%);
+        padding: 2rem;
+        border-radius: inherit;
+        /* Ensure overlay covers the reduced container */
+        min-height: 100%;
+    }
 
-            .promo-box {
-                background: rgba(0,0,0,0.6);
-                backdrop-filter: blur(6px);
-                max-width: 250px;
-            }
-   
+    .promo-box {
+        background: rgba(0,0,0,0.6);
+        backdrop-filter: blur(6px);
+        max-width: 250px;
+    }
 
-        :root {
-            --primary: #4361ee;
-            --secondary: #3f37c9;
-            --accent: #4895ef;
-            --dark: #1b263b;
-            --light: #f8f9fa;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
+
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --accent: #4895ef;
+    --dark: #1b263b;
+    --light: #f8f9fa;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
 
       
         
