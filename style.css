@@ -603,11 +603,6 @@ body{
         min-height: 100%;
     }
 
-    .promo-box {
-        background: rgba(0,0,0,0.6);
-        backdrop-filter: blur(6px);
-        max-width: 250px;
-    }
 
 
 :root {
@@ -620,6 +615,23 @@ body{
     --transition: all 0.3s ease;
 }
 
+
+/* Animation for smalll menu */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); /* start from left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* end at normal position */
+  }
+}
+
+.slide-in-left {
+  display: inline-block;
+  animation: slideInLeft 1.0s ease-out forwards;
+}
       
         
         /* Gallery Styles */
