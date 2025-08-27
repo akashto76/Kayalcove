@@ -24,15 +24,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .blog-subheading {
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: #58c3f1;
-      margin-bottom: 1.2rem;
-      text-align: center;
-      letter-spacing: 1px;
-    }
-
     /* Animation for blog intro section */
 .animate-intro {
   opacity: 0;
@@ -141,7 +132,7 @@
 /* Responsive: 2 cols on tablet, 1 col on mobile */
 @media (max-width: 1024px) {
   .blog-card-simple {
-    width: 46%;
+    width: 56%;
     min-width: 260px;
     margin-bottom: 0;
   }
@@ -195,7 +186,7 @@
     <!-- Hero Section -->
     <div class="small-hero-section position-relative overflow-hidden rounded-4 animate-up">
       <!-- Background image -->
-      <img src="images/resort_image/new-camp-della-exterior-v4.webp" alt="Pool" class="img-fluid rounded-4 w-100">
+      <img src="images/blog_images/bloggg.webp" alt="Pool" class="img-fluid rounded-4 w-100">
       <!-- Overlay for text + button -->
       <div class="small-hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center ps-4 ps-md-5 text-white">
         <p class="small mb-2">Discover the luxury retreat in the heart of Alappuzha</p>
@@ -327,6 +318,44 @@
         <div class="blog-meta"><i class="fas fa-calendar-alt"></i> February 25, 2025</div>
       </div>
     </div>
+
+    <div class="blog-card-simple animate-up" data-bs-toggle="modal" data-bs-target="#blogModal10">
+  <div class="blog-card-img">
+    <img src="images/blog_images/coir.jpg" alt="Alappuzha's Art & Handicrafts">
+  </div>
+  <div class="blog-card-details">
+    <!-- <span class="blog-card-category">Culture</span> -->
+    <h3>Alappuzha's Art & Handicrafts</h3>
+    <p>Explore vibrant local markets and discover the rich tradition of coir products, hand-loom textiles, and unique Kerala handicrafts in Alappuzha.</p>
+    <div class="blog-meta"><i class="fas fa-calendar-alt"></i> February 20, 2025</div>
+  </div>
+</div>
+
+<!-- Blog Post 11 -->
+<div class="blog-card-simple animate-up" data-bs-toggle="modal" data-bs-target="#blogModal11">
+  <div class="blog-card-img">
+    <img src="images/blog_images/sunset.jpg" alt="Evening at Kayalcove">
+  </div>
+  <div class="blog-card-details">
+    <!-- <span class="blog-card-category">Kayalcove</span> -->
+    <h3>Evenings at Kayalcove</h3>
+    <p>Experience magical sunsets at Kayalcove with backwater views, gentle breezes, and authentic Kerala hospitality, perfect for couples and families.</p>
+    <div class="blog-meta"><i class="fas fa-calendar-alt"></i> February 15, 2025</div>
+  </div>
+</div>
+
+<!-- Blog Post 12 -->
+<div class="blog-card-simple animate-up" data-bs-toggle="modal" data-bs-target="#blogModal12">
+  <div class="blog-card-img">
+    <img src="images/blog_images/festival.jpg" alt="Festivals of Alappuzha">
+  </div>
+  <div class="blog-card-details">
+    <!-- <span class="blog-card-category">Festivals</span> -->
+    <h3>Festivals of Alappuzha</h3>
+    <p>Join the celebrations of Alappuzha's famous boat races and temple festivals, where tradition, music, and joy come alive on the backwaters.</p>
+    <div class="blog-meta"><i class="fas fa-calendar-alt"></i> February 10, 2025</div>
+  </div>
+</div>
   </div>
 </section>   
       </div>
@@ -580,6 +609,72 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal 10 -->
+<div class="modal fade" id="blogModal10" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Discover Alappuzha's Art & Handicrafts</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="images/blog_images/coir.jpg" alt="Alappuzha Art & Handicrafts" class="modal-image">
+        <p class="lead">Step into the creative soul of Alappuzha.</p>
+        <ul>
+          <li><strong>Coir Products:</strong> The region is famous for coir mats, rugs, and ropes, handcrafted by local artisans using traditional methods.</li>
+          <li><strong>Handloom Weaving:</strong> Visit weaving centers to see artisans create beautiful kasavu sarees and textiles.</li>
+          <li><strong>Shopping Tips:</strong> Explore local markets for souvenirs, from wooden carvings to shell crafts and Kathakali masks.</li>
+          <li><strong>Workshops:</strong> Join interactive workshops at Kayalcove or in town and try your hand at making coir products or painting Kerala motifs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 11 -->
+<div class="modal fade" id="blogModal11" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Evenings at Kayalcove: Sunset & Serenity</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="images/blog_images/sunset.jpg" alt="Evening at Kayalcove" class="modal-image">
+        <p class="lead">Unwind as the sun sets over the tranquil backwaters at Kayalcove.</p>
+        <ul>
+          <li><strong>Sunset Point:</strong> Enjoy panoramic views with tea or snacks on our waterfront deck.</li>
+          <li><strong>Traditional Performances:</strong> Witness Kerala art forms like Kathakali and Mohiniyattam on select evenings.</li>
+          <li><strong>Candlelight Dinners:</strong> Book a romantic dinner by the water, featuring Kerala cuisine and fresh seafood.</li>
+          <li><strong>Family Activities:</strong> Participate in board games, story sessions, and night-time birdwatching for all ages.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 12 -->
+<div class="modal fade" id="blogModal12" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Festivals of Alappuzha: A Colorful Spectacle</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="images/blog_images/festival.jpg" alt="Festivals of Alappuzha" class="modal-image">
+        <p class="lead">Alappuzha comes alive with vibrant festivals and celebrations.</p>
+        <ul>
+          <li><strong>Nehru Trophy Boat Race:</strong> Held every August, this thrilling event features massive snake boats and festive crowds.</li>
+          <li><strong>Onam:</strong> Kerala's harvest festival is marked by flower carpets, music, and the grand Onam Sadhya feast.</li>
+          <li><strong>Temple Festivals:</strong> Experience traditional rituals, elephant processions, and fireworks at local temples.</li>
+          <li><strong>Kayalcove Special:</strong> Celebrate with us during festival times—enjoy themed dinners, cultural shows, and guided tours to event venues.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
  <footer class="footer-section">
     <div class="container">
