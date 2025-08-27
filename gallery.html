@@ -11,6 +11,71 @@
   <!-- Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 250px;
+  grid-gap: 20px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Size Modifiers */
+.grid-item.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid-item.tall {
+  grid-row: span 2;
+}
+
+.grid-item.wide {
+  grid-column: span 2;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+  }
+  
+  .grid-item.big,
+  .grid-item.wide,
+  .grid-item.tall {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+}
+
+  </style>
 </head>
 <body>
 
@@ -138,6 +203,16 @@
                     <p>Seasonal fruits in vibrant display</p>
                 </div>
             </div>
+
+             <!-- Wide landscape image -->
+            <div class="grid-item wide">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/670f8de8-152d-4e3b-bb9b-e9a79d41c2df.png" alt="Aerial view of tropical beach with turquoise water and white sand" />
+                <div class="caption">
+                    <h3>Tropical Paradise</h3>
+                    <p>Perfect beach getaway destination</p>
+                </div>
+            </div>
+            
         </div>
     </div>
 
