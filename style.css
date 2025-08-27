@@ -788,6 +788,20 @@ body{
 
 /* aboutus */
 
+/* Hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s ease;
+}
+
+/* Visible state */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .about-text {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;

@@ -155,9 +155,9 @@
       </div>
 
       <!-- Button -->
-      <a href="#" class="btn btn-dark rounded-pill px-4 mt-3">
+      <!-- <a href="#" class="btn btn-dark rounded-pill px-4 mt-3">
         Explore More →
-      </a>
+      </a> -->
     </div>
   </div>
 </section>
@@ -297,25 +297,75 @@
 
   <!-- Scripts -->
   <script>
-    // Scroll Effect
-    window.addEventListener("scroll", function() {
-      let navbar = document.querySelector(".navbar-custom");
-      navbar.classList.toggle("scrolled", window.scrollY > 50);
-    });
+  // Scroll Effect for Navbar
+  window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar-custom");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+  });
 
+  document.addEventListener('DOMContentLoaded', function() {
     // Close navbar when clicking a link on mobile
-    document.addEventListener('DOMContentLoaded', function() {
-      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-      const navbarToggler = document.querySelector('.navbar-toggler');
-      
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.innerWidth < 992) {
-            navbarToggler.click();
-          }
-        });
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 992) {
+          navbarToggler.click();
+        }
       });
     });
-  </script>
+
+    // === Reveal Animation ===
+    const aboutSection = document.querySelector(".about-section");
+    const scrollSections = document.querySelectorAll(
+      ".services-section, .reputation-section, footer"
+    );
+
+    // Add hidden state initially
+    aboutSection.classList.add("reveal");
+    scrollSections.forEach(section => section.classList.add("reveal"));
+
+    // Force About Us animation on every refresh
+window.addEventListener("load", () => {
+  const aboutSection = document.querySelector(".about-section");
+
+  if (aboutSection) {
+    // Reset to hidden
+    aboutSection.classList.remove("active");
+    aboutSection.classList.add("reveal");
+
+    // Force browser to recognize the reset
+    void aboutSection.offsetWidth;
+
+    // Replay animation
+    setTimeout(() => {
+      aboutSection.classList.add("active");
+    }, 200);
+  }
+});
+
+
+    // Animate other sections on scroll
+    function revealOnScroll() {
+      scrollSections.forEach(section => {
+        let windowHeight = window.innerHeight;
+        let elementTop = section.getBoundingClientRect().top;
+        let revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+          section.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  });
+</script>
+
+
+
+
 </body>
 </html>                                 
