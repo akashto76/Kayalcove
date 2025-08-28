@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kayalcove | Booking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Your existing navbar and footer styles */
+    
+
+    /* Booking Section Styles */
+    .booking-section {
+      padding: 4rem 0;
+      background-color: #f8f9fa;
+    }
+
+    .booking-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .booking-form-card {
+      background: white;
+      border-radius: 20px;
+      
+      overflow: hidden;
+    }
+
+    .booking-form-header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .booking-form-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .booking-form-body {
+      padding: 2.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .form-control {
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      background-color: #f8f9fa;
+    }
+
+    .form-control:focus {
+      border-color: #3498db;
+      box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+      background-color: white;
+    }
+
+    .form-control::placeholder {
+      color: #adb5bd;
+      font-style: italic;
+    }
+
+    .form-select {
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      background-color: #f8f9fa;
+    }
+
+    .form-select:focus {
+      border-color: #3498db;
+      box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+      background-color: white;
+    }
+
+    .booking-btn {
+      background: linear-gradient(135deg, #000000, #000000);
+      border: none;
+      border-radius: 50px;
+      padding: 15px 40px;
+      
+      font-weight: 200;
+      color: white;
+      width: 100%;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .booking-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+      background: linear-gradient(135deg, #000000, #000000);
+    }
+
+    .contact-info-card {
+      background: white;
+      border-radius: 20px;
+      
+      padding: 2rem;
+      height: 100%;
+    }
+
+    .contact-info-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info-header h3 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info-header p {
+      color: #6c757d;
+      margin-bottom: 0;
+    }
+
+    .contact-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #f1f3f4;
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-item h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-detail i {
+      color: #3498db;
+      margin-right: 10px;
+      width: 18px;
+    }
+
+    .contact-btn {
+      background: linear-gradient(135deg, #000000, #000000);
+      border: none;
+      border-radius: 50px;
+      padding: 12px 30px;
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+    }
+
+    .required {
+      color: #e74c3c;
+    }
+
+   
+
+    @media (max-width: 768px) {
+      .tranquility-text {
+        font-size: 2.5rem;
+      }
+      
+      .booking-form-body {
+        padding: 1.5rem;
+      }
+      
+      .contact-info-card {
+        margin-top: 2rem;
+      }
+      
+      .footer-bottom-content {
+        text-align: center;
+        gap: 15px;
+      }
+      
+      .footer-bottom-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">
+        <img src="images/logo.png" alt="">
+      </a>
+      <!-- Updated toggle button with middle bar for X animation -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon">
+          <span class="middle-bar"></span>
+        </span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <!-- Book Now inside collapse so it aligns properly -->
+          <li class="nav-item ms-lg-3">
+            <a href="#" class="btn btn-light btn-book">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <main class="container-fluid px-3 px-md-4 pt-3">
+    <!-- Hero Section -->
+    <div class="small-hero-section position-relative overflow-hidden rounded-4">
+      <!-- Background image -->
+      <img src="images/resort_image/new-camp-della-exterior-v4.webp" alt="Pool" class="img-fluid rounded-4 w-100">
+
+      <!-- Overlay for text + button -->
+      <div class="small-hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center ps-4 ps-md-5 text-white">
+        <p class="small mb-2">Booking</p>
+        <h1 class="fw-bold display-5 tranquility-text slide-in-left" style="font-family: 'Outfit', sans-serif;">
+          Book Your Room <br><em>Before It's Gone!</em>
+        </h1>
+      </div>
+    </div>
+  </main>
+
+  <!-- Booking Section -->
+  <section class="booking-section">
+    <div class="container booking-container">
+      <div class="row">
+        <!-- Booking Form Column -->
+        <div class="col-lg-8 col-md-12 mb-4">
+          <div class="booking-form-card">
+            <!-- <div class="booking-form-header">
+              <h2>Fill to reserve</h2>
+              <p>Complete the form below to secure your reservation</p>
+            </div> -->
+            <div class="booking-form-body">
+              <form id="bookingForm">
+                <div class="row">
+                  <!-- Name Field -->
+                  <div class="col-12 form-group">
+                    <label class="form-label">Name <span class="required">*</span></label>
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Mobile Number -->
+                  <div class="col-md-6 form-group">
+                    <label class="form-label">Mobile Number <span class="required">*</span></label>
+                    <input type="tel" class="form-control" placeholder="Your Phone Number" required>
+                    <small class="text-muted">Example: +1 212-695-1962</small>
+                  </div>
+
+                  <!-- Email Address -->
+                  <div class="col-md-6 form-group">
+                    <label class="form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" class="form-control" placeholder="Your Email Address" required>
+                    <small class="text-muted">Example: user@website.com</small>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Check In Date -->
+                  <div class="col-md-6 form-group">
+                    <label class="form-label">Check In Date <span class="required">*</span></label>
+                    <input type="date" class="form-control" >
+                  </div>
+
+                  <!-- Check Out Date -->
+                  <div class="col-md-6 form-group">
+                    <label class="form-label">Check Out Date <span class="required">*</span></label>
+                    <input type="date" class="form-control" >
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Number of Guests -->
+                  <div class="col-md-6 form-group">
+                    <label class="form-label">Number of Guest <span class="required">*</span></label>
+                    <select class="form-select" required>
+                      <option value="">Select</option>
+                      <option value="1">1 Guest</option>
+                      <option value="2">2 Guests</option>
+                      <option value="3">3 Guests</option>
+                      <option value="4">4 Guests</option>
+                      <option value="5">5 Guests</option>
+                      <option value="6">6+ Guests</option>
+                    </select>
+                  </div>
+
+                  <!-- Room Type -->
+                  <div class="col-md-6 form-group">
+                    <label class="form-label">Choose Room Type <span class="required">*</span></label>
+                    <select class="form-select" required>
+                      <option value="">Select</option>
+                      <option value="standard">Standard Room</option>
+                      <option value="deluxe">Deluxe Room</option>
+                      <option value="suite">Suite</option>
+                      <option value="presidential">Presidential Suite</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                  <button type="submit" class="booking-btn">
+                    <i class="fas fa-calendar-check me-2"></i>
+                    Make A Reservation
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Information Column -->
+        <div class="col-lg-4 col-md-12">
+          <div class="contact-info-card">
+            <div class="contact-info-header">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-phone-alt text-primary me-2"></i>
+                <span class="text-muted">Book Directly</span>
+              </div>
+              <h3>Book Directly Via Our Contact Line</h3>
+              <p>Reserve your stay at Kayalcove Resort, Alappuzha with ease. Contact us directly for bookings and inquiries.</p>
+            </div>
+
+            <div class="contact-item">
+              <h4>Eastcape Ubud</h4>
+              <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+                <span>(+62) 81 2345 1234</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <span>Contact@domain.com</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Jl. Raya Ubud No.88, Gianyar, Bali 80571</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <h4>Resort Kuta</h4>
+              <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+                <span>(+62) 81 2345 1234</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <span>Contact@domain.com</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Jl. Niti Mandala, Renon, Bali 80235</span>
+              </div>
+            </div>
+
+            <a href="/contactus.html" style="color: #ffffff; text-decoration: none;" class="contact-btn">
+               <i class="fas fa-phone me-2"></i>
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Description Column -->
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <img style="width: 200px;" src="images/logo.png" alt="">
+          <p class="footer-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+          </p>
+          <div class="social-links">
+            <span>Follow our social media :</span><br><br>
+            <a href="#" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-dribbble"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <h4 class="footer-section-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Amenities</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services Column -->
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <h4 class="footer-section-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Reservation</a></li>
+            <li><a href="#">Wedding</a></li>
+            <li><a href="#">Package Trip</a></li>
+            <li><a href="#">Special Occasion</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us Column -->
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <h4 class="footer-section-title">Contact Us</h4>
+          <div class="contact-info">
+            <p><strong>Jl. Ir. H. Juanda South Kuta Beach,</strong><br>
+              Tuban, Kuta, Badung, Bali 80361</p>
+            
+            <p><strong>P:</strong> +62812 3346 6678</p>
+            
+            <p><strong>E:</strong> eastcape@mail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <div class="copyright">
+            Copyright © 2025 Kayalcove
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term & Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    // Scroll Effect
+    window.addEventListener("scroll", function() {
+      let navbar = document.querySelector(".navbar-custom");
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Close navbar when clicking a link on mobile
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 992) {
+            navbarToggler.click();
+          }
+        });
+      });
+    });
+
+    // Form submission handler
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      
+      // Show success message (you can customize this)
+      alert('Reservation request submitted successfully! We will contact you shortly.');
+      
+      // Optionally reset form
+      this.reset();
+    });
+
+    // Set minimum date to today for check-in and check-out
+    document.addEventListener('DOMContentLoaded', function() {
+      const today = new Date().toISOString().split('T')[0];
+      const checkInDate = document.querySelector('input[type="date"]:first-of-type');
+      const checkOutDate = document.querySelector('input[type="date"]:last-of-type');
+      
+      if (checkInDate) {
+        checkInDate.setAttribute('min', today);
+      }
+      
+      if (checkOutDate) {
+        checkOutDate.setAttribute('min', today);
+      }
+      
+      // Ensure check-out date is after check-in date
+      if (checkInDate && checkOutDate) {
+        checkInDate.addEventListener('change', function() {
+          checkOutDate.setAttribute('min', this.value);
+          if (checkOutDate.value && checkOutDate.value <= this.value) {
+            checkOutDate.value = '';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
