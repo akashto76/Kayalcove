@@ -56,11 +56,8 @@
 
       <!-- Overlay for text + button -->
       <div class="small-hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center ps-4 ps-md-5 text-white">
-        <p class="small mb-2">Experience comfort and elegance</p>
-<h1 class="fw-bold display-5 tranquility-text slide-in-left">
-  Discover Our <br><em>Beautiful Rooms & Suites</em>
-</h1>
-
+        <p class="small mb-2">The Amazing Place to provide your escape plan in Bali, Indonesia</p>
+        <h1 class="fw-bold display-5 tranquility-text slide-in-left">Made your Amazing <br><em>Escape Plan Moment Memorable</em></h1>
         <!-- <a href="#" class="btn btn-light btn-book-room mt-3">Book Now <i class="fa-solid fa-arrow-right"></i></a> -->
       </div>
 
@@ -99,7 +96,7 @@
         </div>
         <div class="card-body text-center p-4">
           <h5 class="card-title fw-bold">Backwater Deluxe</h5>
-          <div style="min-height: 15vh;">
+          <div style="min-height: 20vh;">
             <p class="text-muted small">Experience comfort and elegance in our Backwater Deluxe Room, perfect for couples or solo travelers. Designed with modern amenities and touches of Kerala charm, this cozy retreat is ideal after exploring Alappuzha’s houseboats and beaches.</p>
           </div>
             <center><hr></center>
@@ -135,7 +132,7 @@
         </div>
         <div class="card-body text-center p-4">
           <h5 class="card-title fw-bold">Heritage Suite</h5>
-          <div style="min-height: 15vh;">
+          <div style="min-height: 20vh;">
             <p class="text-muted small">Indulge in luxury with our Heritage Suite, offering a spacious bedroom, private sitting area, and elegant interiors. Ideal for those seeking comfort and sophistication while enjoying the calm beauty of Alappuzha.</p>
           </div>            
           <center><hr></center>
@@ -171,7 +168,7 @@
         </div>
         <div class="card-body text-center p-4">
           <h5 class="card-title fw-bold">Lakeside Family Villa</h5>
-          <div style="min-height: 15vh;">
+          <div style="min-height: 20vh;">
             <p class="text-muted small">Perfect for families and groups, our Lakeside Family Villa features multiple bedrooms, a living space, and modern amenities. Surrounded by greenery and close to the backwaters, it’s a peaceful stay with room for everyone.</p>
           </div>
             <center><hr></center>
@@ -207,7 +204,7 @@
         </div>
         <div class="card-body text-center p-4">
           <h5 class="card-title fw-bold">Royal Luxury Villa</h5>
-          <div style="min-height: 15vh;">
+          <div style="min-height: 20vh;">
             <p class="text-muted small">Redefine indulgence with the Royal Luxury Villa, blending Kerala’s traditional design with premium facilities. Featuring private balconies and exclusive spaces, it is perfect for honeymooners or guests seeking an upscale retreat.</p>
           </div>
             <center><hr></center>
@@ -243,7 +240,7 @@
         </div>
         <div class="card-body text-center p-4">
           <h5 class="card-title fw-bold">Arabian Sea View Room</h5>
-          <div style="min-height: 15vh;">
+          <div style="min-height: 20vh;">
             <p class="text-muted small">Wake up to breathtaking views of the Arabian Sea. Our Sea View Room combines comfort with nature’s beauty, making it the perfect stay for beach lovers who want to enjoy Alappuzha’s vibrant coastline.</p>
           </div>
             <center><hr></center>
@@ -279,7 +276,7 @@
         </div>
         <div class="card-body text-center p-4">
           <h5 class="card-title fw-bold">Tropical Garden Villa</h5>
-          <div style="min-height: 15vh;">
+          <div style="min-height: 20vh;">
             <p class="text-muted small">Nestled amidst lush tropical gardens, the Tropical Garden Villa is designed for those who love tranquility and nature. Enjoy a serene ambiance with birdsong and greenery, just minutes from the backwaters.</p>
           </div>
             <center><hr></center>
@@ -295,8 +292,6 @@
 </section>
 
 
-
-<!-- New Heading & Paragraph with animation class -->
 <div class="container my-5">
   <div class="row align-items-center">
     
@@ -307,7 +302,7 @@
     </div>
 
     <!-- Right: Text with unique animation -->
-    <div class="col-md-6 unique-slide-right">
+    <div class="col-md-6 stay-slide-right">
       <h3 class="fw-bold">Discover Your Perfect Stay</h3>
       <p class="text-muted">
         From cozy deluxe rooms to luxury villas, we provide a wide range of stays tailored for couples, families, and groups. 
@@ -322,12 +317,12 @@
   </div>
 </div>
 
-<!-- Unique Animation CSS -->
+
 <style>
-@keyframes uniqueSlideInRight {
+@keyframes staySlideInRight {
   from {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10%);
   }
   to {
     opacity: 1;
@@ -335,18 +330,18 @@
   }
 }
 
-.unique-slide-right {
-  opacity: 0; /* hidden initially */
-  transform: translateX(100px);
+.stay-slide-right {
+  opacity: 0;
+  transform: translateX(10%);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.unique-slide-right.visible {
-  animation: uniqueSlideInRight 1s ease-out forwards;
+.stay-slide-right.visible {
+  animation: staySlideInRight 1s ease-out forwards;
 }
 </style>
 
-<!-- Script for scroll trigger -->
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver((entries, obs) => {
@@ -358,11 +353,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, { threshold: 0.2 }); // 20% visible triggers animation
 
-  document.querySelectorAll(".unique-slide-right").forEach(el => {
+  document.querySelectorAll(".stay-slide-right").forEach(el => {
     observer.observe(el);
   });
 });
 </script>
+
 
 
 
