@@ -582,6 +582,7 @@ body{
                 overflow: hidden;
                 /* Add max-height to control overall container size */
                 max-height: 60vh; /* Adjust this value as needed */
+                
             }
 
 .small-hero-section img {
